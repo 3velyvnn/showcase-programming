@@ -8,7 +8,7 @@ local DISCORD_WEBHOOK: string = process.env.DISCORD_WEBHOOK
 
 local Webhook = require("./WebhookModule")
 
-local hook = Webhook.new(`{DISCORD_WEBHOOK}`)
+local hook = Webhook.new(DISCORD_WEBHOOK) -- idk why did i make that `{string}`
 
 local response = hook
 	:SetUsername("Lune")
